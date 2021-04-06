@@ -111,39 +111,52 @@ Call functions of an external module.</p>
 					</blockquote>
 					<p>Create a hello directory for your first Go source code.</p>
 <p>For example, use the following commands:</p>
+<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">mkdir hello</p>
+					
+					</blockquote>
+<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">cd hello</p>
+					
+					</blockquote>
 
-
-				    <h3 class="mt-5 mb-3">Install Go</h3>
+				    <h3 class="mt-5 mb-3">Enable dependency tracking for your code</h3>
 				   
-<ol>
-	<li>Open the MSI file you downloaded and follow the prompts to install Go.</li>
-<p>By default, the installer will install Go to Program Files or Program Files (x86). You can change the location as needed. After installing, you will need to close and reopen any open command prompts so that changes to the environment made by the installer are reflected at the command prompt.</p>
+<p>
+	When your code imports packages contained in other modules, you manage those dependencies through your code's own module. That module is defined by a go.mod file that tracks the modules that provide those packages. That go.mod file stays with your code, including in your source code repository.</p>
 
-<li>Verify that you've installed Go.</li>
-<p>In Windows, click the Start menu.
-In the menu's search box, type cmd, then press the Enter key.
-In the Command Prompt window that appears, type the following command:</p>
-<ol>
-          <li>
-            In <strong>Windows</strong>, click the <strong>Start</strong> menu.
-          </li>
-          <li>
-            In the menu's search box, type <code>cmd</code>, then press the
-            <strong>Enter</strong> key.
-          </li>
-          <li>
-            In the Command Prompt window that appears, type the following
-            command:
-            <pre>$ go version
+<p>To enable dependency tracking for your code by creating a go.mod file, run the go mod init command, giving it the name of the module your code will be in. The name is the module's module path. In most cases, this will be the repository location where your source code will be kept, such as github.com/mymodule. If you plan to publish your module for others to use, the module path must be a location from which Go tools can download your module.</p>
+
+<p>For the purposes of this tutorial, just use example.com/hello.</p>
+
+<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">$ go mod init example.com/hello</p>
+					
+					</blockquote>	
+
+					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">go: creating new go.mod: module example.com/hello
+
+</p>
+					
+					</blockquote>
+					<h3>Let's start coding width Go</h3>	
+
+					  <p>In your text editor, create a file hello.go in which to write your code.
+Paste the following code into your hello.go file and save the file.</p>     
+		       <p>Our first program will print the classic “hello world” message. Here’s the full source code.</p>  
+		       <pre>
+		       	<code>package main
+import "fmt"
+func main() {
+    fmt.Println("hello world")
+}</code>
+		       </pre>
+				    <td class="code leading">
+            <a href="http://play.golang.org/p/NeviD0awXjt"><img title="Run code" src="play.png" class="run"></a><img title="Copy code" src="clipboard.png" class="copy">
+          <pre class="chroma"><span class="kn">package</span> <span class="nx">main</span>
 </pre>
-          </li>
-          <li>Confirm that the command prints the installed version of Go.</li>
-        </ol>
-
-</ol>			    
-		       <h3>Let's start coding width Go<h3>	
-		       <p>You're set up! Let's Go with <a href="https://golang.org/doc/tutorial/getting-started">GoX100Days</a> </p>	  
-				    
+          </td>
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="menu_go.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
