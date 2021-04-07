@@ -99,91 +99,32 @@ Use the Go package discovery tool to find packages you can use in your own code.
 Call functions of an external module.</p>
 				    
 				    <h3 class="mt-5 mb-3">Golang : Values</h3>
-				 <p>
-				 	Get started with Hello, World.</p>
+				<p>
+Go has various value types including strings, integers, floats, booleans, etc. Here are a few basic examples.</p>
 
-<p>Open a command prompt and cd to your home directory.
-				 </p>
 
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">cd %HOMEPATH%</p>
-					
-					</blockquote>
-					<p>Create a hello directory for your first Go source code.</p>
-<p>For example, use the following commands:</p>
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">mkdir hello</p>
-					
-					</blockquote>
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">cd hello</p>
-					
-					</blockquote>
-
-				    <h3 class="mt-5 mb-3">Enable dependency tracking for your code</h3>
-				   
-<p>
-	When your code imports packages contained in other modules, you manage those dependencies through your code's own module. That module is defined by a go.mod file that tracks the modules that provide those packages. That go.mod file stays with your code, including in your source code repository.</p>
-
-<p>To enable dependency tracking for your code by creating a go.mod file, run the go mod init command, giving it the name of the module your code will be in. The name is the module's module path. In most cases, this will be the repository location where your source code will be kept, such as github.com/mymodule. If you plan to publish your module for others to use, the module path must be a location from which Go tools can download your module.</p>
-
-<p>For the purposes of this tutorial, just use example.com/hello.</p>
-
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go mod init example.com/hello</p>
-					
-					</blockquote>	
-
-					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">go: creating new go.mod: module example.com/hello
-
-</p>
-					
-					</blockquote>
-					<h3>Let's start coding width Go</h3>	
-
-					  <p>In your text editor, create a file hello.go in which to write your code.
-Paste the following code into your hello.go file and save the file.</p>     
-		       <p>Our first program will print the classic “hello world” message. Here’s the full source code.</p>  
-		       <pre>
-		       	<code>
-		       		  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
-package main
+<pre><code>
+	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+	package main
 import "fmt"
 func main() {
-    fmt.Println("hello world")
-}</code>
-		       </pre>
-				  
-          <p>
-To run the program, put the code in hello-world.go and use go run.</p>
 
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go run hello-world.go
-hello world
 
-</p>
-					
-					</blockquote>
+    fmt.Println("go" + "lang")
 
-					<p>Sometimes we’ll want to build our programs into binaries. We can do this using go build.</p>
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go build hello-world.go
-$ ls
-hello-world    hello-world.go
 
-</p>
-					
-					</blockquote>
+    fmt.Println("1+1 =", 1+1)
+    fmt.Println("7.0/3.0 =", 7.0/3.0)
 
-<p>We can then execute the built binary directly.</p>
-<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">	
-$ ./hello-world
-hello world
-</p>
-					
-					</blockquote>
+
+    fmt.Println(true && false)
+    fmt.Println(true || false)
+    fmt.Println(!true)
+}
+</code></pre>
+				    <h3 class="mt-5 mb-3">Enable dependency tracking for your code</h3>
+				   
+
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day1.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
