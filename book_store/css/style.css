@@ -53,7 +53,9 @@ body {
   font-size: 20px;
 }
 
-
+.btnd:hover {
+  background-color: RoyalBlue;
+}
 header {
   background: var(--primary-color);
   height: 80px;
