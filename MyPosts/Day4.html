@@ -233,7 +233,7 @@ Unsigned 64-bit integers (0 to 18446744073709551615)
 								
 							</tr>
 							<tr>
-								<th scope="row">4</th>
+								<th scope="row">5</th>
 								<td><b>int8
 
 </b>
@@ -247,7 +247,7 @@ Signed 8-bit integers (-128 to 127)
 							</tr>
 
 							<tr>
-								<th scope="row">4</th>
+								<th scope="row">6</th>
 								<td><b>int16
 
 </b>
@@ -261,7 +261,7 @@ Signed 16-bit integers (-32768 to 32767)
 								
 							</tr>
 							<tr>
-								<th scope="row">4</th>
+								<th scope="row">7</th>
 								<td><b>int32
 
 </b>
@@ -275,7 +275,7 @@ Signed 32-bit integers (-2147483648 to 2147483647)
 								
 							</tr>
 								<tr>
-								<th scope="row">4</th>
+								<th scope="row">8</th>
 								<td><b>int64
 
 </b>
@@ -285,6 +285,104 @@ Signed 64-bit integers
 (-9223372036854775808 to 9223372036854775807)
 
 
+</p>
+</td>
+								
+							</tr>
+						</tbody>
+					</table>
+<h4>Code example for : Integer Types </h4>
+<pre><code>
+	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+package main
+import "fmt"
+func main() {
+	var A uint8
+	var B  uint16
+	var C uint32
+	var D uint64
+	var E int8
+	var F int16
+	var G int32
+	var H int64
+
+
+    fmt.Println(A)
+    fmt.Println(B)
+    fmt.Println(C)
+    fmt.Println(D)
+    fmt.Println(E)
+    fmt.Println(F)
+    fmt.Println(G)
+    fmt.Println(H)
+
+}
+</code></pre>
+<h4>output of the code : </h4>
+ <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">$ go run integers.go</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+
+</p>
+					
+					</blockquote>
+					<h4> Floating Types
+</h4>
+
+	<table class="table table-striped my-5">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Types and Description</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td><b>float32</b>
+									<p> 
+IEEE-754 32-bit floating-point numbers
+</p>
+</td>
+							
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td><b>float64</b>
+<p>
+IEEE-754 64-bit floating-point numbers
+</p>
+								</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td><b>String types
+</b>
+<p>A string type represents the set of string values. Its value is a sequence of
+bytes. Strings are immutable types. That is, once they are created, it is not
+possible to change the contents of a string. The predeclared string type is
+string.
+</p>
+</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td><b>Derived types
+
+</b>
+<p>They include (a) Pointer types, (b) Array types, (c) Structure types, (d)
+Union types and (e) Function types f) Slice types g) Function types h)
+Interface types i) Map types j) Channel Types
 </p>
 </td>
 								
