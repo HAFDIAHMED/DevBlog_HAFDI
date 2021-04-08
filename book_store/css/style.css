@@ -2,7 +2,7 @@
   --primary-color: #3B7EEB;
   --secondary-color: #e12b2be3;
   --book-section: #ebe9e9;
-  --button-primary: #1a8510;
+  --button-primary: #fccc04;
 }
 
 * {
@@ -153,7 +153,7 @@ header .container .search-box .fa-search {
   height: 50px;
   width: 140px;
   color: #fff;
-  background: var(--primary-color);
+  background: var(--button-primary);
   border-radius: 10px;
   font-size: 1.1rem;
   font-weight: lighter;
