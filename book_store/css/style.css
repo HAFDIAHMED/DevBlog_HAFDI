@@ -116,15 +116,6 @@ header .container .search-box .fa-search {
   -ms-flex-pack: center;
   justify-content: center;
 }
-/* Style buttons */
-.btn {
-  background-color: #fccc04;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
 
 /* Darker background on mouse-over */
 .btn:hover {
