@@ -401,45 +401,107 @@ Complex numbers with float64 real and imaginary parts
 							<tr>
 								<th scope="row">1</th>
 								<td><b>float32</b>
-									<p> 
-IEEE-754 32-bit floating-point numbers
+									<p>byte
+
+same as uint8
 </p>
 </td>
 							
 							</tr>
 							<tr>
 								<th scope="row">2</th>
-								<td><b>float64</b>
+								<td><b>rune</b>
 <p>
-IEEE-754 64-bit floating-point numbers
+
+same as int32
+
 </p>
 								</td>
 								
 							</tr>
 							<tr>
 								<th scope="row">3</th>
-								<td><b>complex64
+								<td><b>uint
 </b>
 <p>
-Complex numbers with float32 real and imaginary parts
+
+32 or 64 bits
 </p>
 </td>
 								
 							</tr>
 							<tr>
 								<th scope="row">4</th>
-								<td><b>complex128
+								<td><b>int
 
 </b>
 <p>
-Complex numbers with float64 real and imaginary parts
+
+same size as uint
+
+</p>
+</td>
+								
+							</tr>
+
+							<tr>
+								<th scope="row">4</th>
+								<td><b>uintptr
+
+</b>
+<p>
+
+
+an unsigned integer to store the uninterpreted bits of a pointer value
+
 </p>
 </td>
 								
 							</tr>
 						</tbody>
 					</table>
+<h4>Code example for : Integer Types </h4>
+<pre><code>
+	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+package main
+import "fmt"
+func main() {
+	var A uint8
+	var B  uint16
+	var C uint32
+	var D uint64
+	var E int8
+	var F int16
+	var G int32
+	var H int64
 
+
+    fmt.Println(A)
+    fmt.Println(B)
+    fmt.Println(C)
+    fmt.Println(D)
+    fmt.Println(E)
+    fmt.Println(F)
+    fmt.Println(G)
+    fmt.Println(H)
+
+}
+</code></pre>
+<h4>output of the code : </h4>
+ <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">$ go run integers.go</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+
+</p>
+					
+					</blockquote>
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day3.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
