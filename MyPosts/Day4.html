@@ -129,37 +129,61 @@ true (b) false
 							</tr>
 							<tr>
 								<th scope="row">2</th>
-								<td>Jacob</td>
+								<td><b>Numeric types</b>
+<p>They are again arithmetic types and they represents a) integer types or b)
+floating point values throughout the program.
+</p>
+								</td>
 								
 							</tr>
 							<tr>
 								<th scope="row">3</th>
-								<td>Larry</td>
+								<td><b>String types
+</b>
+<p>A string type represents the set of string values. Its value is a sequence of
+bytes. Strings are immutable types. That is, once they are created, it is not
+possible to change the contents of a string. The predeclared string type is
+string.
+</p>
+</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td><b>Derived types
+
+</b>
+<p>They include (a) Pointer types, (b) Array types, (c) Structure types, (d)
+Union types and (e) Function types f) Slice types g) Function types h)
+Interface types i) Map types j) Channel Types
+</p>
+</td>
 								
 							</tr>
 						</tbody>
 					</table>
 
-
+<h4>Code example for : Boolean Types</h4>
 <pre><code>
 	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
-	package main
+package main
 import "fmt"
 func main() {
-
-
-    fmt.Println("go" + "lang")
-
-
-    fmt.Println("1+1 =", 1+1)
-    fmt.Println("7.0/3.0 =", 7.0/3.0)
-
-
-    fmt.Println(true && false)
-    fmt.Println(true || false)
-    fmt.Println(!true)
+	var A= true 
+	var B= false
+    fmt.Println(A)
+    fmt.Println(B)
+    
 }
 </code></pre>
+<h4> the output of the code : </h4>
+ <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">$ go run booleans.go</p>
+<p>true</p>
+<p>false</p>
+</p>
+					
+					</blockquote>
 				    <h3 class="mt-5 mb-3">Run the code </h3>
 				   <p>Strings, which can be added together with +.</p>
 
