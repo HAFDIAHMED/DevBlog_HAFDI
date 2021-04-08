@@ -26,9 +26,11 @@ body {
 }
 
 .btn {
+  background-color: #fccc04;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -36,7 +38,21 @@ body {
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  color: white;
+ 
+
 }
+/* Style buttons */
+/* Style buttons */
+.btnd {
+  background-color: #fccc04;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 
 header {
   background: var(--primary-color);
