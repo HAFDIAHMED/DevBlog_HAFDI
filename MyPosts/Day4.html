@@ -466,39 +466,23 @@ an unsigned integer to store the uninterpreted bits of a pointer value
 package main
 import "fmt"
 func main() {
-	var A uint8
-	var B  uint16
-	var C uint32
-	var D uint64
-	var E int8
-	var F int16
-	var G int32
-	var H int64
+	var A float32
+	var B  float64
+		
+	C := complex(1,1)
 
-
-    fmt.Println(A)
-    fmt.Println(B)
-    fmt.Println(C)
-    fmt.Println(D)
-    fmt.Println(E)
-    fmt.Println(F)
-    fmt.Println(G)
-    fmt.Println(H)
-
+    fmt.Println("I am float32",A)
+    fmt.Println("I am float64",B)
+    fmt.Println("I am a complex",C)
+     
 }
 </code></pre>
 <h4>output of the code : </h4>
  <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
 						<p class="mb-2">$ go run integers.go</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-
+<p>I am float32 0</p>
+<p>I am float64 0</p>
+<p>I am a complex (1+1i)</p>
 </p>
 					
 					</blockquote>
