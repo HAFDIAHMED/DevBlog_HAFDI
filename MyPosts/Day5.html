@@ -183,6 +183,39 @@ func main() {
 x is of type float64
 y is of type int
 </code></pre>
+<h3>Mixed Variable Declarationin Go</h3>
+<p>Variables of different types can be declared in one go using type inference.
+</p>
+
+<h5>Example</h5>
+
+<pre><code>
+package main
+import "fmt"
+func main() {
+ var a, b, c = 3, 4, "foo"
+ fmt.Println(a)
+ fmt.Println(b)
+ fmt.Println(c)
+ fmt.Printf("a is of type %T\n", a)
+ fmt.Printf("b is of type %T\n", b)
+ fmt.Printf("c is of type %T\n", c)
+}
+</code></pre>
+<b>When the above code is compiled and executed, it produces the following result:
+</b>
+ <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">
+<p>3</p>
+<p>4</p>
+<p>foo</p>
+<p>a is of type int</p>
+<p>b is of type int</p>
+<p>c is of type string</p>
+
+</p>
+					
+					</blockquote>
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day4.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
