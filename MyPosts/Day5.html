@@ -127,384 +127,62 @@ d = 42;
 <p>A static type variable declaration provides assurance to the compiler that there is one variable
 available with the given type and name so that the compiler can proceed for further
 compilation without requiring the complete detail of the variable. </p>
-					<table class="table table-striped my-5">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Types and Description</th>
-							
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td><b>Boolean types</b>
-									<p>They are boolean types and consists of the two predefined constants: (a)
-true (b) false
-</p>
-</td>
-							
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td><b>Numeric types</b>
-<p>They are again arithmetic types and they represents a) integer types or b)
-floating point values throughout the program.
-</p>
-								</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td><b>String types
-</b>
-<p>A string type represents the set of string values. Its value is a sequence of
-bytes. Strings are immutable types. That is, once they are created, it is not
-possible to change the contents of a string. The predeclared string type is
-string.
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td><b>Derived types
 
-</b>
-<p>They include (a) Pointer types, (b) Array types, (c) Structure types, (d)
-Union types and (e) Function types f) Slice types g) Function types h)
-Interface types i) Map types j) Channel Types
-</p>
-</td>
-								
-							</tr>
-						</tbody>
-					</table>
-
-<h4>Code example for : Boolean Types</h4>
+<h5>Example</h5>
+<p>
+Try the following example, where the variable has been declared with a type and initialized
+inside the main function:</p>
 <pre><code>
-	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+
 package main
 import "fmt"
 func main() {
-	var A= true 
-	var B= false
-    fmt.Println(A)
-    fmt.Println(B)
-    
+ var x float64
+ x = 20.0
+ fmt.Println(x)
+ fmt.Printf("x is of type %T\n", x)
 }
 </code></pre>
-<h4>output of the code : </h4>
- <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go run booleans.go</p>
-<p>true</p>
-<p>false</p>
-</p>
-					
-					</blockquote>
-				    <h3 class="mt-5 mb-3">Integer Types</h3>
-	<table class="table table-striped my-5">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Types and Description</th>
-							
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td><b>uint8</b>
-									<p>Unsigned 8-bit integers (0 to 255)
 
-</p>
-</td>
-							
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td><b>uint16</b>
-<p>Unsigned 16-bit integers (0 to 65535)
-</p>
-								</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td><b>uint32
-</b>
-<p>Unsigned 32-bit integers (0 to 4294967295)
+<b>The result of the code above</b>
 
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td><b>uint64
-
-</b>
-<p>
-Unsigned 64-bit integers (0 to 18446744073709551615)
-
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">5</th>
-								<td><b>int8
-
-</b>
-<p>
-
-Signed 8-bit integers (-128 to 127)
-
-</p>
-</td>
-								
-							</tr>
-
-							<tr>
-								<th scope="row">6</th>
-								<td><b>int16
-
-</b>
-<p>
-
-
-Signed 16-bit integers (-32768 to 32767)
-
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">7</th>
-								<td><b>int32
-
-</b>
-<p>
-
-
-Signed 32-bit integers (-2147483648 to 2147483647)
-
-</p>
-</td>
-								
-							</tr>
-								<tr>
-								<th scope="row">8</th>
-								<td><b>int64
-
-</b>
-<p>
-
-Signed 64-bit integers
-(-9223372036854775808 to 9223372036854775807)
-
-
-</p>
-</td>
-								
-							</tr>
-						</tbody>
-					</table>
-<h4>Code example for : Integer Types </h4>
 <pre><code>
-	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
-package main
+20
+x is of type float64
+</code></pre>
+<h3>Dynamic Type Declaration / Type Inferencein Go</h3>
+<p>A dynamic type variable declaration requires the compiler to interpret the type of the variable
+based on the value passed to it. The compiler does not require a variable to have type
+statically as a necessary requirement.</p>
+
+
+<h5>Example</h5>
+<p>
+Try the following example, where the variables have been declared without any type. Notice,
+in case of type inference, we initialized the variable y with := operator, whereas x is initialized
+using = operator.</p>
+
+<pre><code>
+	
+	package main
 import "fmt"
 func main() {
-	var A uint8
-	var B  uint16
-	var C uint32
-	var D uint64
-	var E int8
-	var F int16
-	var G int32
-	var H int64
-
-
-    fmt.Println(A)
-    fmt.Println(B)
-    fmt.Println(C)
-    fmt.Println(D)
-    fmt.Println(E)
-    fmt.Println(F)
-    fmt.Println(G)
-    fmt.Println(H)
-
+ var x float64 = 20.0
+ y := 42
+ fmt.Println(x)
+ fmt.Println(y)
+ fmt.Printf("x is of type %T\n", x)
+ fmt.Printf("y is of type %T\n", y)
 }
 </code></pre>
-<h4>output of the code : </h4>
- <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go run integers.go</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-<p>0</p>
-
-</p>
 					
-					</blockquote>
-					<h4> Floating Types
-</h4>
-
-	<table class="table table-striped my-5">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Types and Description</th>
-							
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td><b>float32</b>
-									<p> 
-IEEE-754 32-bit floating-point numbers
-</p>
-</td>
-							
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td><b>float64</b>
-<p>
-IEEE-754 64-bit floating-point numbers
-</p>
-								</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td><b>complex64
-</b>
-<p>
-Complex numbers with float32 real and imaginary parts
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td><b>complex128
-
-</b>
-<p>
-Complex numbers with float64 real and imaginary parts
-</p>
-</td>
-								
-							</tr>
-						</tbody>
-					</table>
-<h4> Other Numeric Types
-</h4>
-<p>There is also a set of numeric types with implementation-specific sizes:</p>
-	<table class="table table-striped my-5">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Types and Description</th>
-							
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td><b>float32</b>
-									<p>byte
-
-same as uint8
-</p>
-</td>
-							
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td><b>rune</b>
-<p>
-
-same as int32
-
-</p>
-								</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td><b>uint
-</b>
-<p>
-
-32 or 64 bits
-</p>
-</td>
-								
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td><b>int
-
-</b>
-<p>
-
-same size as uint
-
-</p>
-</td>
-								
-							</tr>
-
-							<tr>
-								<th scope="row">4</th>
-								<td><b>uintptr
-
-</b>
-<p>
-
-
-an unsigned integer to store the uninterpreted bits of a pointer value
-
-</p>
-</td>
-								
-							</tr>
-						</tbody>
-					</table>
-<h4>Code example for : Float Types </h4>
+<h5>The output of the code above</h5>
 <pre><code>
-	  <a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
-package main
-import "fmt"
-func main() {
-	var A float32
-	var B  float64
-		
-	C := complex(1,1)
-
-    fmt.Println("I am float32",A)
-    fmt.Println("I am float64",B)
-    fmt.Println("I am a complex",C)
-     
-}
+20
+42
+x is of type float64
+y is of type int
 </code></pre>
-<h4>output of the code : </h4>
- <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">$ go run integers.go</p>
-<p>I am float32 0</p>
-<p>I am float64 0</p>
-<p>I am a complex (1+1i)</p>
-</p>
-					
-					</blockquote>
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day4.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
