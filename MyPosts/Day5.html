@@ -108,117 +108,13 @@ Constants are treated just like regular variables except that their values canno
 after their definition.
 </p>
 
-<h5>Variable Definitionin Go
+<h5>The constKeyword
 </h5>
-<pre><code> var variable_list optional_data_type;
-</code></pre>
-
-<p>Here, <b>optional_data_type</b> is a valid Go data type including byte, int, float32, complex64,
-boolean or any user-defined object, etc., and <b>variable_list</b> may consist of one or more
-identifier names separated by commas. Some valid declarations are shown here:
+<p>You can use const prefix to declare constants with a specific type as follows:
 </p>
-
-<pre><code>
-var i, j, k int;
-var c, ch byte;
-var f, salary float32;
-d = 42;
-</code></pre>
-
-<h3>Static Type Declarationin Go</h3>
-
-<p>A static type variable declaration provides assurance to the compiler that there is one variable
-available with the given type and name so that the compiler can proceed for further
-compilation without requiring the complete detail of the variable. </p>
-
-<h5>Example</h5>
-<p>
-Try the following example, where the variable has been declared with a type and initialized
-inside the main function:</p>
-<pre><code>
-
-package main
-import "fmt"
-func main() {
- var x float64
- x = 20.0
- fmt.Println(x)
- fmt.Printf("x is of type %T\n", x)
-}
-</code></pre>
-
-<b>The result of the code above</b>
-
-<pre><code>
-20
-x is of type float64
-</code></pre>
-<h3>Dynamic Type Declaration / Type Inferencein Go</h3>
-<p>A dynamic type variable declaration requires the compiler to interpret the type of the variable
-based on the value passed to it. The compiler does not require a variable to have type
-statically as a necessary requirement.</p>
+<pre><code> const variable type = value;</code></pre>
 
 
-<h5>Example</h5>
-<p>
-Try the following example, where the variables have been declared without any type. Notice,
-in case of type inference, we initialized the variable y with := operator, whereas x is initialized
-using = operator.</p>
-
-<pre><code>
-	
-	package main
-import "fmt"
-func main() {
- var x float64 = 20.0
- y := 42
- fmt.Println(x)
- fmt.Println(y)
- fmt.Printf("x is of type %T\n", x)
- fmt.Printf("y is of type %T\n", y)
-}
-</code></pre>
-					
-<h5>The output of the code above</h5>
-<pre><code>
-20
-42
-x is of type float64
-y is of type int
-</code></pre>
-<h3>Mixed Variable Declarationin Go</h3>
-<p>Variables of different types can be declared in one go using type inference.
-</p>
-
-<h5>Example</h5>
-
-<pre><code>
-package main
-import "fmt"
-func main() {
- var a, b, c = 3, 4, "foo"
- fmt.Println(a)
- fmt.Println(b)
- fmt.Println(c)
- fmt.Printf("a is of type %T\n", a)
- fmt.Printf("b is of type %T\n", b)
- fmt.Printf("c is of type %T\n", c)
-}
-</code></pre>
-<b>When the above code is compiled and executed, it produces the following result:
-</b>
- <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">
-<p>3</p>
-<p>4</p>
-<p>foo</p>
-<p>a is of type int</p>
-<p>b is of type int</p>
-<p>c is of type string</p>
-
-</p>
-					
-					</blockquote>
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day4.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="Day5.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
