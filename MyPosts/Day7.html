@@ -116,9 +116,16 @@ operators:
 <h5>Arithmetic Operators
 
 </h5>
-
-
-
+<p>Following table shows all the arithmetic operators supported by Go language. Assume
+variable <b>A</b> holds 10 and variable <b>B</b> holds 20 then:</p>
+  <figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table1.png" alt="image"></a>
+				        
+				    </figure>
+				    <b>Example
+</b>
+<p>Try the following example to understand all the arithmetic operators available in Go
+programming language:</p>
 </code></pre>
 <p>
 	The following example shows how to use the const keyword:</p>
@@ -128,11 +135,23 @@ operators:
 package main
 import "fmt"
 func main() {
- const LENGTH int = 10
- const WIDTH int = 5
- var area int
- area = LENGTH * WIDTH
- fmt.Printf("value of area : %d", area)
+ var a int = 21
+ var b int = 10
+ var c int
+ c = a + b
+ fmt.Printf("Line 1 - Value of c is %d\n", c )
+ c = a - b
+ fmt.Printf("Line 2 - Value of c is %d\n", c )
+ c = a * b
+ fmt.Printf("Line 3 - Value of c is %d\n", c )
+ c = a / b
+ fmt.Printf("Line 4 - Value of c is %d\n", c )
+ c = a % b
+ fmt.Printf("Line 5 - Value of c is %d\n", c )
+ a++
+ fmt.Printf("Line 6 - Value of a is %d\n", a )
+ a--
+ fmt.Printf("Line 7 - Value of a is %d\n", a )
 }
 
 </code></pre>
@@ -140,14 +159,181 @@ func main() {
 </p>
  <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
 						<p class="mb-2">
-<p>value of area : 50
-</p>
+<p>Line 1 - Value of c is 31</p>
+<p>Line 2 - Value of c is 11</p>
+<p>Line 3 - Value of c is 210</p>
+<p>Line 4 - Value of c is 2</p>
+<p>Line 5 - Value of c is 1</p>
+<p>Line 6 - Value of a is 22</p>
+<p>Line 7 - Value of a is 21</p>
 
 
 </p>
 					
 					</blockquote>
-			    <nav class="blog-nav nav nav-justified my-5">
+					<h5>Relational Operators
+</h5>
+		<p>The following table lists all the relational operators supported by Go language. Assume
+variable <b>A</b> holds 10 and variable <b>B</b> holds 20, then:</p>
+<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table2.png" alt="image"></a>
+				        
+				    </figure>
+				    <b>Example</b>
+				    <p>Try the following example to understand all the relational operators available in Go
+programming language:</p>
+
+<pre><code>
+	<a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+	package main
+import "fmt"
+func main() {
+ var a int = 21
+ var b int = 10
+ if( a == b ) {
+ fmt.Printf("Line 1 - a is equal to b\n" )
+ } else {
+ fmt.Printf("Line 1 - a is not equal to b\n" )
+ }
+ if ( a < b ) {
+ fmt.Printf("Line 2 - a is less than b\n" )
+ } else {
+ fmt.Printf("Line 2 - a is not less than b\n" )
+ }
+
+ if ( a > b ) {
+ fmt.Printf("Line 3 - a is greater than b\n" )
+ } else {
+ fmt.Printf("Line 3 - a is not greater than b\n" )
+ }
+ /* Lets change value of a and b */
+ a = 5
+ b = 20
+ if ( a <= b ) {
+ fmt.Printf("Line 4 - a is either less than or equal to b\n" )
+ }
+ if ( b >= a ) {
+ fmt.Printf("Line 5 - b is either greater than or equal to b\n" )
+ }
+</code></pre>
+<p>When you compile and execute the above program, it produces the following result:
+</p>
+ <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">
+<p>Line 1 - a is not equal to b</p>
+<p>Line 2 - a is not less than b</p>
+<p>Line 3 - a is greater than b</p>
+<p>Line 4 - a is either less than or equal to b</p>
+<p>Line 5 - b is either greater than or equal to b</p>
+
+
+</p>
+					
+					</blockquote>
+
+					<h5>Logical Operators</h5>
+<p>The following table lists all the logical operators supported by Go language. Assume variable
+<b>A</b> holds 1 and variable <b>B</b> holds 0, then:</p>
+<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table3.png" alt="image"></a>
+				        
+				    </figure>
+				    <p>The following table shows all the logical operators supported by Go language. Assume variable
+A holds true and variable B holds false, then:
+</p>
+	<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table4.png" alt="image"></a>
+				        </figure>
+				        <b>Example</b>
+<p>Try the following example to understand all the logical operators available in Go programming
+language:</p>
+
+				    <pre><code>
+<a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
+				    	package main
+import "fmt"
+func main() {
+ var a bool = true
+ var b bool = false
+ if ( a && b ) {
+ fmt.Printf("Line 1 - Condition is true\n" )
+ }
+ if ( a || b ) {
+ fmt.Printf("Line 2 - Condition is true\n" )
+ }
+ /* lets change the value of a and b */
+ a = false
+ b = true
+ if ( a && b ) {
+ fmt.Printf("Line 3 - Condition is true\n" )
+ } else {
+ fmt.Printf("Line 3 - Condition is not true\n" )
+ }
+ if ( !(a && b) ) {
+ fmt.Printf("Line 4 - Condition is true\n" )
+ }
+}
+</code></pre>  
+<p>When you compile and execute the above program, it produces the following result:
+</p>  
+		<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">
+<p>Line 2 - Condition is true</p>
+
+<p>Line 3 - Condition is not true</p>
+<p>Line 4 - Condition is true</p>
+</p>
+					
+					</blockquote>		    	
+<h5>Bitwise Operators</h5>
+<p>Bitwise operators work on bits and perform bit-by-bit operation. The truth tables for &, |, and
+^ are as follows:</p>
+<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table5.png" alt="image"></a>
+				        </figure>
+				        <p>The Bitwise operators supported by C language are listed in the following table. Assume
+variable A holds 60 and variable B holds 13, then:</p>
+<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table6.png" alt="image"></a>
+				        </figure>
+				        <figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/table7.png" alt="image"></a>
+				        </figure>
+				      <b>  Example</b>
+<p>Try the following example to understand all the bitwise operators available in Go programming
+language:</p>
+<pre><code>
+	package main
+import "fmt"
+func main() {
+ var a uint = 60 /* 60 = 0011 1100 */
+ var b uint = 13 /* 13 = 0000 1101 */
+ var c uint = 0
+ c = a & b /* 12 = 0000 1100 */
+ fmt.Printf("Line 1 - Value of c is %d\n", c )
+ c = a | b /* 61 = 0011 1101 */
+ fmt.Printf("Line 2 - Value of c is %d\n", c )
+ c = a ^ b /* 49 = 0011 0001 */
+ fmt.Printf("Line 3 - Value of c is %d\n", c )
+  c = a << 2 /* 240 = 1111 0000 */
+ fmt.Printf("Line 4 - Value of c is %d\n", c )
+ c = a >> 2 /* 15 = 0000 1111 */
+ fmt.Printf("Line 5 - Value of c is %d\n", c )
+}
+
+</code></pre>
+		<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+						<p class="mb-2">
+<p>Line 1 - Value of c is 12</p>
+<p>Line 2 - Value of c is 61</p>
+<p>Line 3 - Value of c is 49</p>
+<p>Line 4 - Value of c is 240</p>
+<p>Line 5 - Value of c is 15</p>
+</p>
+					
+					</blockquote>
+
+						    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day6.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
