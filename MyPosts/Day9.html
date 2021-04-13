@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Day 8: If/Else</title>
+    <title>Day 9: For</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -75,13 +75,13 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Day 8: If/Else</h2>
+				    <h2 class="title mb-2">Day 9: For</h2>
 				   
 			    </header>
 			    
 			    <div class="blog-post-body">
 				    <figure class="blog-banner">
-				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/ifelse.jpg" alt="image"></a>
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/loop.png" alt="image"></a>
 				        
 				    </figure>
 
@@ -98,9 +98,10 @@ Use the Go package discovery tool to find packages you can use in your own code.
 
 Call functions of an external module.</p>
 				    
-				    <h3 class="mt-5 mb-3">If/Else
+				    <h3 class="mt-5 mb-3">Loops: For
 </h3>
-<p>Branching with <b>if</b> and <b>else</b> in <b>Go</b> is straight-forward.
+<p>
+for is <b>Go</b>’s only looping construct. Here are some basic types of for loops.
 </p>
 
 <h5>Example
@@ -110,49 +111,63 @@ Call functions of an external module.</p>
   
 <pre><code>
 	<a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
-	package main
+package main
 
 import "fmt"
 
 func main() {
 
-    if 7%2 == 0 {
-        fmt.Println("7 is even")
-    } else {
-        fmt.Println("7 is odd")
+    i := 1
+    for i <= 3 {
+        fmt.Println(i)
+        i = i + 1
     }
 
-    if 8%4 == 0 {
-        fmt.Println("8 is divisible by 4")
+    for j := 7; j <= 9; j++ {
+        fmt.Println(j)
     }
 
-    if num := 9; num < 0 {
-        fmt.Println(num, "is negative")
-    } else if num < 10 {
-        fmt.Println(num, "has 1 digit")
-    } else {
-        fmt.Println(num, "has multiple digits")
+    for {
+        fmt.Println("loop")
+        break
+    }
+
+    for n := 0; n <= 5; n++ {
+        if n%2 == 0 {
+            continue
+        }
+        fmt.Println(n)
     }
 }
 </code></pre>
-<p>A statement can precede conditionals; any variables declared in this statement are available in all branches.</p>
-
-
+<p>The most basic type, with a single condition.</p>
+<p>A classic initial/condition/after for loop.</p>
 <p>Note that you don’t need parentheses around conditions in Go, but that the braces are required.</p>
 		<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
 						<p class="mb-2">
-							<p><b>$ go run if-else.go</b> </p>
-<p>7 is odd</p>
-<p>8 is divisible by 4</p>
-<p>9 has 1 digit</p>
+							<p><b>$ go run for.go</b> </p>
 
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>loop</p>
+<p>1</p>
+<p>3</p>
+<p>5</p>
 </p>
 					
 					</blockquote>
+<p>for without a condition will loop repeatedly until you break out of the loop or return from the enclosing function.</p>
 
+<p>You can also continue to the next iteration of the loop.
+
+</p>
 						    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day7.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="Day9.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day8.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 				
