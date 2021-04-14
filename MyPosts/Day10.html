@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Day 9: For</title>
+    <title>Day 10: Switch</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -75,13 +75,13 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Day 9: For</h2>
+				    <h2 class="title mb-2">Day 10: Switch</h2>
 				   
 			    </header>
 			    
 			    <div class="blog-post-body">
 				    <figure class="blog-banner">
-				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/loop.png" alt="image"></a>
+				        <a href="#"><img class="img-fluid" src="assets/images/blog/Golang/switch.jpg" alt="image"></a>
 				        
 				    </figure>
 
@@ -98,11 +98,10 @@ Use the Go package discovery tool to find packages you can use in your own code.
 
 Call functions of an external module.</p>
 				    
-				    <h3 class="mt-5 mb-3">Loops: For
+				    <h3 class="mt-5 mb-3">Statement : Switch
 </h3>
-<p>
-for is <b>Go</b>’s only looping construct. Here are some basic types of for loops.
-</p>
+
+<p>Switch statements express conditionals across many branches.</p>
 
 <h5>Example
 
@@ -113,61 +112,77 @@ for is <b>Go</b>’s only looping construct. Here are some basic types of for lo
 	<a href="http://play.golang.org/p/NeviD0awXjt">Run Go Online</a>
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "time"
+)
 
 func main() {
 
-    i := 1
-    for i <= 3 {
-        fmt.Println(i)
-        i = i + 1
+    i := 2
+    fmt.Print("Write ", i, " as ")
+    switch i {
+    case 1:
+        fmt.Println("one")
+    case 2:
+        fmt.Println("two")
+    case 3:
+        fmt.Println("three")
     }
 
-    for j := 7; j <= 9; j++ {
-        fmt.Println(j)
+    switch time.Now().Weekday() {
+    case time.Saturday, time.Sunday:
+        fmt.Println("It's the weekend")
+    default:
+        fmt.Println("It's a weekday")
     }
 
-    for {
-        fmt.Println("loop")
-        break
+    t := time.Now()
+    switch {
+    case t.Hour() < 12:
+        fmt.Println("It's before noon")
+    default:
+        fmt.Println("It's after noon")
     }
 
-    for n := 0; n <= 5; n++ {
-        if n%2 == 0 {
-            continue
+    whatAmI := func(i interface{}) {
+        switch t := i.(type) {
+        case bool:
+            fmt.Println("I'm a bool")
+        case int:
+            fmt.Println("I'm an int")
+        default:
+            fmt.Printf("Don't know type %T\n", t)
         }
-        fmt.Println(n)
     }
+    whatAmI(true)
+    whatAmI(1)
+    whatAmI("hey")
 }
 </code></pre>
-<p>The most basic type, with a single condition.</p>
-<p>A classic initial/condition/after for loop.</p>
-<p>Note that you don’t need parentheses around conditions in Go, but that the braces are required.</p>
+<p>You can use commas to separate multiple expressions in the same case statement. We use the optional default case in this example as well.</p>
+
+
+<p><b>switch</b> without an expression is an alternate way to express if/else logic. Here we also show how the case expressions can be non-constants.</p>
+
+<p>A type <b>switch</b> compares types instead of values. You can use this to discover the type of an interface value. In this example, the variable t will have the type corresponding to its clause.</p>
+
+
+<p>the output of the example :</p>
 		<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
 						<p class="mb-2">
-							<p><b>$ go run for.go</b> </p>
-
-<p>1</p>
-<p>2</p>
-<p>3</p>
-<p>7</p>
-<p>8</p>
-<p>9</p>
-<p>loop</p>
-<p>1</p>
-<p>3</p>
-<p>5</p>
-</p>
+							<p><b>$ go run switch.go</b> </p>
+<p>Write 2 as two</p>
+<p>It's a weekday</p>
+<p>It's after noon</p>
+<p>I'm a bool</p>
+<p>I'm an int</p>
+<p>Don't know type string</p>
 					
 					</blockquote>
-<p>for without a condition will loop repeatedly until you break out of the loop or return from the enclosing function.</p>
-
-<p>You can also continue to the next iteration of the loop.
-
-</p>
-						    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day8.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="Day10.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+					    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="Day9.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 				
